@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Fruktur&family=Montserrat:ital,wght@0,100;0,300;1,100&family=Poppins:wght@800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 8px 8px 5px 0 rgba(0, 0, 0, 0.602),-8px -8px 5px 0 rgba(0, 0, 0, 0.602) ;
+}
+
+.box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: #5B409C;
+    transition: all 1s linear;
+}
+
+.box .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform-origin: left top;
+    transform: translate(0%, 85%) rotate(42deg);
+    transition: all 1s ease;
+    line-height: 2.5rem;
+}
+
+.box .details h1{
+    color: black;
+    font-weight: 600;
+    font-size: 2.5em;
+}
+
+.box .details p{
+    color: black;
+    font-weight: x-large;
+    font-size: 1.25em;
+}
+
+.box:hover .details {
+    transform-origin: right top;
+    transform: translate(0%, 0%);
+}
+
+.box:hover img {
+    scale: 1.2;
+}
+
+i {
+    width: 30px;
+    height: 30px;
+    margin: 40px 20px;
+    cursor: pointer;
+
+}
